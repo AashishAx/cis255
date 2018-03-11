@@ -1,0 +1,270 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <title>SVSU CSIS Mobile</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Noto+Sans:400,400i,700,700i" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+	
+	
+	<link href="css/w3.css" rel="stylesheet" />
+	<link href="css/ashrest8.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="js/hy-drawer.js"></script>
+
+    <style>.hy-drawer-content { color:#fff; background:#990000; } aside a { color: #fff; }</style>
+	<style>
+	
+	
+
+		footer {
+			background-color:#990000;
+			position:fixed; 
+			
+			bottom:0; left:0;
+			width:100%;
+			height:40px;
+			padding:0;
+			border-top:1px solid #444;
+		}
+
+		footer{
+			font-size:20px;
+			text-align:center;
+			color:#f3f3f3;
+			font-weight:bold;
+			text-shadow:0 -1px 0 rgba(0,0,0,0.5);
+			line-height:45px;
+		}
+
+		#scroll-content {
+			 <!-- position: absolute;  -->
+			
+			z-index:1;
+			width:100%;
+			padding:0;
+			-webkit-overflow-scrolling:touch;
+			overflow:auto;
+		}
+	
+	</style>
+  </head>
+  <body>
+  
+  
+	<header class="mainheader">
+				 <a id="menuEl" href="#drawerEl"><span class="sr-only">Menu</span></a> 
+				<span>Course Sequence</span>
+				<a class="fa dropbtn" id="moreoption" onclick="fun_Dropdown()"><span class="sr-only">More Option</span></a>
+	</header>
+	
+    <div class="wrapper">
+
+	<main>
+	<div id="scroll-content">
+		
+        <h2>Course Sequence</h2>
+
+        <p> This chart provides an overview of a four year plan for completing the Computer Information Systems program. Students should contact the CSIS Department for one-on-one advising to ensure that courses are being completed in a timely manner to meet their graduation goals.</p>
+		
+		<table>
+			<tr>
+				<th>Year 1 - Freshman</th>
+				<th>Year 2 - Sophomore</th>
+				<th>Year 3 - Junior</th>
+				<th>Year 4 - Senior</th>
+			</tr>
+			<tr>
+				<td>General Education</td>
+				<td>General Education</td>
+				<td>General Education</td>
+				<td>General Education</td>
+			</tr>
+			<tr>
+				<td>MATH 103</td>
+				<td>General Requirements</td>
+				<td>General Requirements (2 Form)</td>
+				<td>General Requirements</td>
+			</tr>
+			<tr>
+				<td>General Requirements</td>
+				<td>CS 245</td>
+				<td>LAW 308, MGT 321, MKT 331</td>
+				<td>Core Requirements</td>
+			</tr>
+			<tr>
+				<td>COMM 105</td>
+				<td>RPW 304</td>
+				<td>Core Requirements</td>
+				<td>CIS 422</td>
+			</tr>
+			<tr>
+				<td>MATH 120B</td>
+				<td>ACCT 213</td>
+				<td>CIS 301</td>
+				<td>CIS 424</td>
+			</tr>
+			<tr>
+				<td>PHIL 205A (or PHIL 210B</td>
+				<td>ECON 221</td>
+				<td>CIS 333</td>
+				<td>Electives</td>
+			</tr>
+			<tr>
+				<td>Core Requirements</td>
+				<td>Core Requirements</td>
+				<td>CIS 355</td>
+				<td>CIS 425</td>
+			</tr>
+			<tr>
+				<td>CS 105 (or CS 107)</td>
+				<td>CS 216</td>
+				<td>CIS 366</td>
+				<td>CIS 486</td>
+			</tr>
+			<tr>
+				<td>CS 146</td>
+				<td>CIS 255</td>
+				<td>CIS 386</td>
+				<td>CIS 490</td>
+			</tr>
+			<tr>
+				<td>CS 116</td>
+				<td>CIS 311</td>
+				<td>Electives</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Electives</td>
+				<td>Electives</td>
+				<td>CS 333</td>
+				<td></td>	
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>CS 345</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>CIS 357</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>CIS 371</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>CIS 490</td>
+				<td></td>
+			</tr>
+		</table>
+		
+		<!-- search -->
+		<div id="search" class="w3-modal">
+			<div class="w3-modal-content">
+				<header class="w3-container w3-red"> 
+					<span onclick="document.getElementById('search').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+					<h4>EMAIL</h4>
+				</header>
+					<div class="w3-container">
+					<span>Send To:</span>
+					<input type="text" value="" style="width:100%;"></input><br />
+					<span>Compose Message:</span>
+					<input type="text" value="" style="width:100%; padding:50px;"></input>
+				</div>
+				
+					<p class="w3-container w3-darkred" id="popup"><input type="button" class="w3-button w3-red" value="Send Email"></input></p>
+				
+			</div>
+		</div>
+		
+		<!-- email -->
+		<div id="email" class="w3-modal">
+			<div class="w3-modal-content">
+				<header class="w3-container w3-red"> 
+					<span onclick="document.getElementById('email').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+					<h4>EMAIL</h4>
+				</header>
+					<div class="w3-container">
+					<span>Send To:</span>
+					<input type="text" value="" style="width:100%;"></input><br />
+					<span>Compose Message:</span>
+					<input type="text" value="" style="width:100%; padding:50px;"></input>
+				</div>
+				
+					<p class="w3-container w3-darkred" id="popup"><input type="button" class="w3-button w3-red" value="Send Email"></input></p>
+				
+			</div>
+		</div>
+       
+		
+		<br /><br/><br />
+		
+	</div> <!-- end scroll-content -->
+		<aside class="panelelement" id="drawerEl" data-prevent-default="true" data-mouse-events="true">
+		  <ul>
+			<li><a href="index.html" class="panelelement" >Home</a></li>
+			<li><a href="aboutus.html" class="panelelement" >About Us</a></li>
+			<li><a href="faculty.html" class="panelelement" >Faculty</a></li>
+			<li><a href="news.html" class="panelelement" >News</a></li>
+			<li><a href="mission.html" class="panelelement" >Mission Statement</a></li>
+			<li><a href="course_seq.html" class="panelelement" >Course Sequence</a></li>
+			<li><a href="cs_course_seq.html" class="panelelement" >CS Course Sequence</a></li>
+			<li><a href="carrer.html" class="panelelement" >Carrers</a></li>
+			<li><a href="widgets.html" class="panelelement" >Widgets</a></li>
+			<li><a href="whycis.html" class="panelelement" >Why Study CIS?</a></li>
+			<li><a href="alumni.html" class="panelelement" >Our Alumni</a></li>
+		  </ul>
+		</aside>
+		<!-- overflow option dropwodn -->
+		<div id="overflowEl" class="dropdown-content">
+			<a href="#home">Home</a>
+			<a href="#about">About</a>
+			<a href="#contact">Contact</a>
+		</div>
+		</main>
+    </div> <!-- end wrapper -->
+	
+	<footer class="icon-bar">
+		<div class="icon-bar">
+			<a class="active" href="index.html"><i class="fa fa-home"></i></a> 
+			<a onclick="document.getElementById('search').style.display='block'"><i class="fa fa-search"></i></a> 
+			<a onclick="document.getElementById('email').style.display='block'"><i class="fa fa-envelope"></i></a> 
+			<a href="media.html"><i class="fa fa-globe"></i></a>
+			<a href="#"><i class="fa fa-trash"></i></a> 
+		</div>
+	</footer>
+
+    <script>
+      var ua = navigator.userAgent.toLowerCase();
+      var isSafari = ua.indexOf('safari') > 0 && ua.indexOf('chrome') < 0;
+      var isMobileSafari = isSafari && ua.indexOf('mobile') > 0;
+
+      $('#drawerEl').drawer({
+        range: isMobileSafari ? [35, 150] : [0, 150],
+        threshold: isSafari ? 0 : 10,
+      })
+      .on('transitioned.hy.drawer', function(e) {
+        console.log('hy-drawer transitioned to', e.detail);
+      });
+
+      $('#menuEl').click(function (e) {
+        e.preventDefault();
+        $('#drawerEl').drawer('toggle');
+      });
+    </script>
+	<script src="js/ashrest8.js"></script>
+	
+  </body>
+  
+</html>

@@ -1,0 +1,275 @@
+
+
+<!DOCTYPE html> 
+<html> 
+
+	<head> 
+	
+		<title>Basic mobile app</title> 
+		<meta charset="utf-8" />  
+		<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />  
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css" />
+		<link rel="stylesheet" href="ashrest8.css" />  
+		
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+		<script src="hy-drawer.js"></script>
+		 <style>.hy-drawer-content { color:#fff; background:#0769ad; } aside a { color: #fff; }</style>
+	<style>
+
+		footer {
+			background-color:#000;
+			position:fixed; 
+			z-index:2;
+			bottom:0; left:0;
+			width:100%;
+			height:50px;
+			padding:0;
+			border-top:1px solid #444;
+		}
+
+		footer{
+			font-size:15px;
+			text-align:center;
+			color:#f3f3f3;
+			font-weight:bold;
+			text-shadow:0 -1px 0 rgba(0,0,0,0.5);
+			line-height:20px;
+		}
+
+		#wrapper {
+			position:absolute; 
+			z-index:1;
+			top:45px; bottom:48px; left:0;
+			width:100%;
+			background:#aaa;
+			overflow:auto;
+		}
+
+		#scroll-content {
+			position:absolute; 
+			z-index:1;
+			width:100%;
+			padding:0;
+			-webkit-overflow-scrolling:touch;
+			overflow:auto;
+		}
+	
+	</style>
+
+	</head> 
+	
+	<body> 
+	
+		<!-- Home -->
+		
+		<div data-role="page" id="index">
+			
+			<header data-role="header">
+			<span class="ui-btn-inner ui-btn-corner-all" aria-hidden="true"><span class="ui-btn-text"></span><span class="ui-icon ui-icon-hamb-l-l ui-icon-shadow"></span></span>
+				
+				 <a id="menuEl" href="#drawerEl"><span class="sr-only">Menu</span></a> 
+				<h1>Top title bar</h1>
+			</header>
+			<div data-role="content">
+				<h3>Show another page??</h3>
+				<p>hint: click the button below!</p>
+				<p><a href="#about1" data-role="button" data-theme="a">Menu</a></p> 
+				<p><a href="#about2" data-role="button" data-theme="b">Go Fun Yourself</a></p> 
+				<p><a href="#about3" data-role="button" data-theme="c">Hitchhiker's Guide To Doggo</a></p>
+				<p><a href="#about4" data-role="button" data-theme="d">About Me</a></p> 
+				<p><a data-inline="true" href="#about5" data-role="button" data-theme="e">About us</a></p> 
+			</div>
+			</div>
+			<aside id="drawerEl" data-prevent-default="true" data-mouse-events="true">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Test</a></li>
+    <li><a href="#">Works</a></li>
+    <li><a href="#">Portfolios</a></li>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+      </aside>
+	
+
+			<footer data-role="footer">
+				<h2>&copy; footer here.</h2>
+			</footer>
+			
+		
+
+		<!-- page 1 -->
+		<div data-role="page" id="about1" data-add-back-btn="true">
+			<header data-role="header">
+				<a href="index.html" data-icon="gear" data-theme="b" class="ui-btn-right">Settings</a>
+				<h1>Page 1 Here</h1>
+			</header>
+
+			<div data-role="content">
+				<p>just some extra content as well.</p>
+				<p>I mean, you can <a data-rel="back" href="#index">go back</a> at any time.</p>
+				<img src="http://csis.svsu.edu/~ashrest8/cis255/html5/images/mini_planet.jpg" style="height:300px; width:300px;"/>
+			</div>
+			<footer data-role="footer" class="ui-body-b">
+			  <div data-role="navbar">
+				<ul>
+				  <li><a href="#index" data-direction="reverse">App Homescreen!</a></li>
+				  <li><a href="http://www.google.com/" data-rel="external">Google Me</a></li>
+				  <li><a href="http://csis.svsu.edu/~ashrest8/cis255/menu.html" data-rel="external">Visit My Menu site</a></li>
+				</ul>
+			  </div>
+			</footer>
+		</div>
+		
+		<!-- page 2 -->
+		<div data-role="page" id="about2" data-add-back-btn="true">
+			<header data-role="header">
+				<a href="index.html" data-icon="gear" data-theme="b" class="ui-btn-right">Settings</a>
+				<h1>Page 2 Here</h1>
+			</header>
+
+			<div data-role="content">
+				<p>just some extra content as well.</p>
+				<p>I mean, you can <a data-rel="back" href="#index">go back</a> at any time.</p>
+				<img src="https://cdn.worldvectorlogo.com/logos/9gag.svg" style="height:300px; width:300px;"/>
+			</div>
+			<footer data-role="footer" class="ui-body-b">
+			  <div data-role="navbar">
+				<ul>
+				  <li><a href="#index" data-direction="reverse">App Homescreen!</a></li>
+				  <li><a href="http://www.google.com/" data-rel="external">Google Me</a></li>
+				   <li><a href="http://www.9gag.com/" data-rel="external">Go Fun Yourself</a></li>
+				</ul>
+			  </div>
+			</footer>
+		</div>
+
+		<!-- page 3	-->
+		<div data-role="page" id="about3" data-add-back-btn="true">
+			<header data-role="header">
+				<a href="index.html" data-icon="gear" data-theme="b" class="ui-btn-right">Settings</a>
+				<h1>Page 3 Here</h1>
+			</header>
+
+			<div data-role="content">
+				<p>just some extra content as well.</p>
+				<p>I mean, you can <a data-rel="back" href="#index">go back</a> at any time.</p>
+				<img src="data:image/jpeg;base64,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" style="height:300px; width:300px;" />
+			</div>
+			<footer data-role="footer" class="ui-body-b">
+			  <div data-role="navbar">
+				<ul>
+				  <li><a href="#index" data-direction="reverse">App Homescreen!</a></li>
+				  <li><a href="http://www.google.com/" data-rel="external">Google Me</a></li>
+				  <li><a href="https://d2slcw3kip6qmk.cloudfront.net/marketing/blog/2017Q2/doggos-diagram-for-blog-post-half-size.jpg" data-rel="external">Learn About Doggo</a></li>
+				</ul>
+			  </div>
+			</footer>
+		</div>
+		
+		<!-- page 4 -->
+		<div data-role="page" id="about4" data-add-back-btn="true">
+			<header data-role="header">
+				<a href="index.html" data-icon="gear" data-theme="b" class="ui-btn-right">Settings</a>
+				<h1>Page 4 Here</h1>
+			</header>
+
+			<div data-role="content">
+				<p>just some extra content as well.</p>
+				<p>I mean, you can <a data-rel="back" href="#index">go back</a> at any time.</p>
+				<h2> You thought there would be an image here didn't you? </h2>
+				<h5> But I'm lazy </h5>
+			</div>
+			<footer data-role="footer" class="ui-body-b">
+			  <div data-role="navbar">
+				<ul>
+				  <li><a href="#index" data-direction="reverse">App Homescreen!</a></li>
+				  <li><a href="http://www.google.com/" data-rel="external">Google Me</a></li>
+				  <li><a href="http://www.hongkiat.com/" data-rel="external">Hongkiat Blog</a></li>
+				</ul>
+			  </div>
+			</footer>
+		</div>
+		
+		<!-- page 5 -->
+		<div data-role="page" id="about5" data-add-back-btn="true">
+			<header data-role="header">
+				<a href="index.html" data-icon="gear" data-theme="b" class="ui-btn-right">Settings</a>
+				<h1>Page 5 Here</h1>
+			</header>
+
+			<div data-role="content">
+				<p>just some extra content as well.</p>
+				<p>I mean, you can <a data-rel="back" href="#index">go back</a> at any time.</p>
+				<p>I'm here for reasons I guess</p>
+			</div>
+			<footer data-role="footer" class="ui-body-b">
+			  <div data-role="navbar">
+				<ul>
+				  <li><a href="#index" data-direction="reverse">App Homescreen!</a></li>
+				  <li><a href="http://www.google.com/" data-rel="external">Google Me</a></li>
+				  <li><a href="http://csis.svsu.edu/~ashrest8/cis255/menu.html" data-rel="external">Visit My Menu site</a></li>
+				</ul>
+			  </div>
+			</footer>
+		</div>
+		
+		<!-- <script src="hy-drawer.js"></script> -->
+		
+		<script>
+      var ua = navigator.userAgent.toLowerCase();
+      var isSafari = ua.indexOf('safari') > 0 && ua.indexOf('chrome') < 0;
+      var isMobileSafari = isSafari && ua.indexOf('mobile') > 0;
+
+      $('#drawerEl').drawer({
+        range: isMobileSafari ? [35, 150] : [0, 150],
+        threshold: isSafari ? 0 : 10,
+      })
+      .on('transitioned.hy.drawer', function(e) {
+        console.log('hy-drawer transitioned to', e.detail);
+      });
+
+      $('#menuEl').click(function (e) {
+        e.preventDefault();
+        $('#drawerEl').drawer('toggle');
+      });
+    </script>
+
+	</body>
+	
+</html>
+<!-- 
+INSTRUCTIONS 
+
+1. copy The Standard HTML Template code from: 
+https://www.hongkiat.com/blog/build-websites-apps-jquery-mobile/
+
+2. optional: read All You Need to Know About the HTML5 Data Attribute
+https://webdesign.tutsplus.com/tutorials/all-you-need-to-know-about-the-html5-data-attribute--webdesign-9642
+
+3. copy the Constructing the Body Content code from:
+https://www.hongkiat.com/blog/build-websites-apps-jquery-mobile/
+
+4. test the code in your browser
+if it does not work you might have to change all instances of "http:" to "https:"
+
+5. add 4 more buttons and use the other themes "a" through "e", like this:
+    <p><a href="#about" data-role="button" data-theme="b">About us</a></p>
+
+6. add attribute-value to your last button: data-inline="true" 
+
+7. copy Top Bar Buttons code from: 
+https://www.hongkiat.com/blog/build-websites-apps-jquery-mobile/
+this code will add "Back" button to About page 
+
+8. copy Footer Navigation code to your About page from:
+https://www.hongkiat.com/blog/build-websites-apps-jquery-mobile/
+	
+more ideas...
+http://view.jquerymobile.com/master/demos/
+-->
